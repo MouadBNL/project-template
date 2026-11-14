@@ -1,0 +1,14 @@
+{
+  "path": ["apps", "packages", "tools", "e2e/src"],
+  "format": ["typescript", "tsx"],
+  "minTokens": 80,
+  "ignore": [
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    "**/src/testing/**",
+    "**/routeTree.gen.ts",
+    "**/migrations/**",
+    "**/node_modules/**"
+  ],
+  "reporters": ["console"]
+}

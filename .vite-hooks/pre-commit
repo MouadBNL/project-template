@@ -1,0 +1,5 @@
+# Format and lint the staged files (the `staged` block of vite.config.ts). Skip once with
+# `git commit --no-verify`, or for a machine with VP_GIT_HOOKS=0 (docs/testing.md).
+# --no-stash: lint-staged's backup stash would go on the git stash stack, which is shared with
+# every worktree and agent session of this repository.
+vp staged --no-stash

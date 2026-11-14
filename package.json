@@ -1,0 +1,24 @@
+{
+  "name": "project-template",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vp run --no-cache -r --parallel dev",
+    "duplicates": "jscpd --exit-code 1",
+    "check": "vp run -r check:static && vp run -r test && vp run knip && vp run duplicates",
+    "check:static": "vp check vite.config.ts knip.config.ts .jscpd.json tsconfig.json tsconfig.base.json package.json pnpm-workspace.yaml README.md AGENTS.md CLAUDE.md docs",
+    "e2e": "pnpm --filter @app/e2e e2e",
+    "test:postgres": "pnpm --filter @app/e2e test:postgres",
+    "fix": "vp check --fix",
+    "prepare": "vp config --no-agent"
+  },
+  "devDependencies": {
+    "@types/node": "catalog:",
+    "jscpd": "catalog:",
+    "knip": "catalog:",
+    "typescript": "catalog:",
+    "vite-plus": "catalog:"
+  },
+  "packageManager": "pnpm@12.18.0"
+}
