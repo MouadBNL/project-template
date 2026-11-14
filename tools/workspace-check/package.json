@@ -1,0 +1,17 @@
+{
+  "name": "@app/workspace-check",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Checks what pnpm does not: every dependency of every package.json takes its version from the catalog (`catalog:`) or the workspace (`workspace:*`).",
+  "type": "module",
+  "scripts": {
+    "check:static": "vp check",
+    "test": "vp test --no-cache --no-fsModuleCache"
+  },
+  "devDependencies": {
+    "@types/node": "catalog:",
+    "typescript": "catalog:",
+    "vite-plus": "catalog:",
+    "zod": "catalog:"
+  }
+}
