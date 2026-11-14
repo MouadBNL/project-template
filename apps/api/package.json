@@ -1,0 +1,28 @@
+{
+  "name": "@app/api",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node --env-file-if-exists=../../.env --watch src/main.ts",
+    "start": "node --env-file-if-exists=../../.env src/main.ts",
+    "check:static": "vp check",
+    "test": "vp test --no-cache --no-fsModuleCache"
+  },
+  "dependencies": {
+    "@app/contracts": "workspace:*",
+    "@app/db": "workspace:*",
+    "@app/result": "workspace:*",
+    "@hono/node-server": "catalog:",
+    "@orpc/server": "catalog:",
+    "drizzle-orm": "catalog:",
+    "hono": "catalog:",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@orpc/client": "catalog:",
+    "@types/node": "catalog:",
+    "typescript": "catalog:",
+    "vite-plus": "catalog:"
+  }
+}
