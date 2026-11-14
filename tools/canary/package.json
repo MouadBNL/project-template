@@ -1,0 +1,20 @@
+{
+  "name": "@app/canary",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Proves the root lint config still enforces each convention: lints violating and compliant samples, at the paths they stand for, with the real root vite.config.ts.",
+  "type": "module",
+  "scripts": {
+    "check:static": "vp check",
+    "test": "vp test --no-cache --no-fsModuleCache && node src/main.ts"
+  },
+  "dependencies": {
+    "@app/result": "workspace:*",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@types/node": "catalog:",
+    "typescript": "catalog:",
+    "vite-plus": "catalog:"
+  }
+}
