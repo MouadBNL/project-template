@@ -1,0 +1,17 @@
+{
+  "name": "@app/result",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "check:static": "vp check",
+    "test": "vp test --no-cache --no-fsModuleCache"
+  },
+  "devDependencies": {
+    "typescript": "catalog:",
+    "vite-plus": "catalog:"
+  }
+}
