@@ -1,0 +1,20 @@
+{
+  "name": "@app/e2e",
+  "version": "0.0.0",
+  "private": true,
+  "description": "End-to-end smoke suite: the real API and a production build of the web app, driven by Playwright. Not part of `pnpm check`; run `pnpm e2e`.",
+  "type": "module",
+  "scripts": {
+    "check:static": "vp check",
+    "e2e": "playwright test",
+    "test:postgres": "node src/postgres.adapter.ts"
+  },
+  "devDependencies": {
+    "@playwright/test": "catalog:",
+    "@types/node": "catalog:",
+    "typescript": "catalog:",
+    "vite": "catalog:",
+    "vite-plus": "catalog:",
+    "zod": "catalog:"
+  }
+}
