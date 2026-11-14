@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>App</title>
+    <script>
+      // Before the first paint, not in the (deferred) app script: a theme the user pinned
+      // applies at once, so a dark OS never shows a light choice dark for a frame. The same
+      // key and values as src/features/theme/api/theme-preference.ts.
+      try {
+        var theme = window.localStorage.getItem("app:theme");
+        if (theme === "light" || theme === "dark") document.documentElement.dataset.theme = theme;
+      } catch (unavailable) {}
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
