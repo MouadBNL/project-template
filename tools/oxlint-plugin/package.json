@@ -1,0 +1,23 @@
+{
+  "name": "@app/oxlint-plugin",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Repo-specific lint rules, loaded by the root vite.config.ts (lint.jsPlugins).",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "check:static": "vp check",
+    "test": "vp test --no-cache --no-fsModuleCache"
+  },
+  "dependencies": {
+    "@app/result": "workspace:*",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@types/node": "catalog:",
+    "typescript": "catalog:",
+    "vite-plus": "catalog:"
+  }
+}
